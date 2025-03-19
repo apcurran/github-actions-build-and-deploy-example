@@ -1,8 +1,7 @@
 name: Deploy project to GitHub Pages
 on:
     push:
-        branches:
-            -main
+        branches: [ main ]
 jobs:
     build-deploy:
         runs-on: ubuntu-latest
