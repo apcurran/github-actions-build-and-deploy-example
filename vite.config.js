@@ -1,7 +1,7 @@
 // get intellisense in IDE
 /** @type {import('vite').UserConfig} */
 export default {
-    // production server resolves to https://<my-example.com>/github-actions-build-and-deploy-example
-    // not https://<my-example.com>
+    // production server resolves to https://<username>.github.io/<repo-name>/
+    // not https://<username>.github.io
     base: "/github-actions-build-and-deploy-example/"
 }
