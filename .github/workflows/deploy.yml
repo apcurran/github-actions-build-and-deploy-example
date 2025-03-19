@@ -1,0 +1,19 @@
+name: Deploy project to GitHub Pages
+on:
+    push:
+        branches:
+            -main
+jobs:
+    build-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            # 1. checkout code so remote runner can access my repo's files
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            # 2. set up Node language on runner
+            - name: Set up Node.js
+              uses: actions/setup-node@v4
+              with:
+                node-version: 20
+                cache: "npm"
