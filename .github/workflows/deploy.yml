@@ -20,3 +20,9 @@ jobs:
             # 3. install package dependencies
             - name: Install dependencies
               run: npm ci # fresh install with clean install
+
+            # 4. build with Vite
+            - name: Build project with Vite
+              run: npm run build
+            
+            
