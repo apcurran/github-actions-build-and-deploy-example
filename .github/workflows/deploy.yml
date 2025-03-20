@@ -6,26 +6,21 @@ jobs:
     build-deploy:
         runs-on: ubuntu-latest
         steps:
-            # 1. checkout code so remote runner can access my repo's files
             - name: Checkout repository
               uses: actions/checkout@v4
 
-            # 2. set up Node language on runner
             - name: Set up Node.js
               uses: actions/setup-node@v4
               with:
                 node-version: 20
                 cache: "npm"
             
-            # 3. install package dependencies
             - name: Install dependencies
               run: npm ci # fresh install with clean install
 
-            # 4. build with Vite
             - name: Build project with Vite
               run: npm run build
             
-            # 5. deploy project to GitHub Pages
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v4
               with:
